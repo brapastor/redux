@@ -1,0 +1,19 @@
+import React from 'react'
+import Media from './media'
+import './playlist.css'
+
+function    Playlist(props) {
+    return (
+        <div className="Playlist" >
+            {
+                props.playlist.map((item) => {
+                    return <Media openModal={props.handleOpenModal} {...item} key={item.id}
+                        // title={item.title}
+                    />
+                })
+            }
+        </div>
+    )
+}
+
+export default Playlist;
